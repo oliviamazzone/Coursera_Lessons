@@ -1,0 +1,40 @@
+###PACKAGES BASICS
+
+install.packages()
+
+#installing from bioconductor (repository for bioinformatics related packages)
+#first install the bioconductor installer (this is also how you install from CRAN)
+install.packages('BiocManager')
+#then install the package using function (coursera is not updated)
+BiocManager::install("package_name")
+
+#to summon a package 
+library(package_name_no_quotations)
+
+#if you want to check what packages are installed
+library()
+#or
+installed.packages()
+
+#updating packages
+#be careful because sometimes updating a package can change the functionality of your code
+old.packages()
+#to update all of em
+update.packages()
+install.packages("old_package_name")
+
+#to detach (unload) a package if they aren't playing nice together
+detach('package: package_name', unload=TRUE)
+
+#to uninstall a package
+remove.packages("package_name")
+
+#to determine what version of R you're running and what packages you have installed
+#(good to include when posting to forums)
+sessionInfo()
+
+#to see the functions that a package provides you can access the help manual included with the package
+help(package= 'package_name')
+#the more extensive version is a vignette
+browseVignettes("package_name")
+
